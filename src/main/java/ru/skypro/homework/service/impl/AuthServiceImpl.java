@@ -36,12 +36,12 @@ public class AuthServiceImpl implements AuthService {
       return false;
     }
     manager.createUser(
-        User.builder()
-            .passwordEncoder(this.encoder::encode)
-            .password(registerReq.getPassword())
-            .username(registerReq.getUsername())
-            .roles(role.name())
-            .build());
+            User.builder()
+                    .passwordEncoder(this.encoder::encode)
+                    .password(registerReq.getPassword())
+                    .username(registerReq.getUsername())
+                    .roles(role.name())
+                    .build());
     return true;
   }
 }

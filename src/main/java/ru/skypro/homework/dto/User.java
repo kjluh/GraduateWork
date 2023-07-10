@@ -2,16 +2,19 @@ package ru.skypro.homework.dto;
 
 import lombok.Data;
 
+/**
+ * Пользователь DTO
+ */
 @Data
-public class RegisterReq {
+public class User {
+    /**
+     * ID пользователя
+     */
+    private int id;
     /**
      * Логин пользователя
      */
-    private String username;
-    /**
-     * Пароль пользователя
-     */
-    private String password;
+    private String email;
     /**
      * Имя пользователя
      */
@@ -21,11 +24,11 @@ public class RegisterReq {
      */
     private String lastName;
     /**
-     * Номер телефона пользователя
+     * Телефон пользователя
      */
     private String phone;
     /**
-     * Роль пользователя
+     * Ссылка на аватар пользователя
      */
-    private Role role;
+    private String image;
 }
